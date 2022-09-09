@@ -117,7 +117,7 @@ uint16_t lerp_rgb(u8 r1, u8 g1, u8 b1, u8 r2, u8 g2, u8 b2, u8 t) { return rgb(l
 uint16_t color_temp(u8 temp1, u8 temp2, u8 r1, u8 g1, u8 b1, u8 r2, u8 g2, u8 b2, float temp) {
   float t = (float)(temp - temp1) / (float)(temp2 - temp1);
   u8 a = (u8)(int)(t * 255);
-  return lerp_rgb(r1, g1, b1, r2, g2, b2, a);
+  return lerp_rgb(r1, g1, b1, r2, g2, b2, a); 
 }
 
 uint16_t heatmap(float temp) {
